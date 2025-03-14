@@ -21,7 +21,7 @@ const Hero = () => {
     if (images.length === 0)return
     const interval = setInterval(()=>{
       setCurrentImage((prev)=> (prev + 1) % images.length)
-    }, 5000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [images])
