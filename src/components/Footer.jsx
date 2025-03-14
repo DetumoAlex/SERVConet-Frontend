@@ -42,9 +42,10 @@ const Footer = () => {
       
       </div>
      
-      <hr className="px-20 font-bold"/>
-      <div className="flex justify-center bg-white text-black font-bold">
-        <p>2025 “SERVConet” All Rights Received</p>
+      <div className="flex  flex-col bg-white text-black font-bold mb-8 ">
+      <hr className="mt-2 "/>
+        
+        <p className="flex justify-center mt-2">2025 |SERVConet| All Rights Received.</p>
       </div>
     </div>
   );
