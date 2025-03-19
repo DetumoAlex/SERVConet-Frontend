@@ -4,7 +4,7 @@ import { FcServices } from "react-icons/fc";
 
 const Footer = () => {
   return (
-    <div className="bg-amber-700 text-white ">
+    <div className="bg-black text-white ">
         <div className="flex px-20 p-15 justify-between">
       <div className=" w-[356] h-[140]">
         <h1 className="text-xl font-bold flex ">

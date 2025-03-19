@@ -37,14 +37,14 @@ const Navbar = () => {
             </div>
 
             <div className="hover:scale-105 transition duration:300 ease-in">
-              <Link href={"/service"}>Service</Link>
+              <Link href={"/services"}>Services</Link>
             </div>
 
             <div className="hover:scale-105 transition duration:300 ease-in">
-              <Link href={"/about"}>About us</Link>
+              <Link href={"/About"}>About us</Link>
             </div>
             <div className="hover:scale-105 transition duration:300 ease-in">
-              <Link href={"contact"}>Contact</Link>
+              <Link href={"/contact"}>Contact</Link>
             </div>
           </div>
 
