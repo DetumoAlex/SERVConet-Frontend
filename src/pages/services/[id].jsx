@@ -6,13 +6,13 @@ const ServiceDetail = () => {
   const { id } = router.query; // Get ID from the URL
   const [service, setService] = useState(null);
 
-  useEffect(() => {
-    if (id) {
-      fetch(`/api/services/${id}`)
-        .then((res) => res.json())
-        .then((data) => setService(data));
-    }
-  }, [id]);
+  // useEffect(() => {
+  //   if (id) {
+  //     fetch(`/api/services/${id}`)
+  //       .then((res) => res.json())
+  //       .then((data) => setService(data));
+  //   }
+  // }, [id]);
 
   if (!service) {
     return <p className="text-center text-lg font-semibold">Loading...</p>;

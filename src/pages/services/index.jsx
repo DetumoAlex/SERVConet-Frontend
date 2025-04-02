@@ -5,11 +5,11 @@ import React, { useEffect, useState } from "react";
 const Services = () => {
   const [service, setService] = useState([]);
 
-  useEffect(() => {
-    fetch("/api/services")
-      .then((res) => res.json())
-      .then((data) => setService(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/api/services")
+  //     .then((res) => res.json())
+  //     .then((data) => setService(data));
+  // }, []);
 
   return (
     <div className="mt-4 p-4">

@@ -8,10 +8,10 @@
 // export default nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
 
   images: {
-    domains: ['source.unsplash.com'],
+    domains: ['eu-west-2.graphassets.com'],
   },
   webpack(config, { dev }) {
     if (dev) {

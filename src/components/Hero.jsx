@@ -1,6 +1,7 @@
-import Image from "next/image";
+"use client"
+
+
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
 import herobg from "../../public/images/hero-bg.png";
 import formbg from "../../public/images/hero-3.png";
 import { VscCallIncoming } from "react-icons/vsc";
@@ -8,23 +9,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { TiLocation } from "react-icons/ti";
 
 const Hero = () => {
-  const [images, setImages] = useState([])
-  const [currentImage, setCurrentImage] = useState(0)
-
-  useEffect(() => {
-    fetch('/api/images')
-    .then((res)=>res.json())
-    .then((data)=>setImages(data))
-  },[])
-
-  useEffect(()=> {
-    if (images.length === 0)return
-    const interval = setInterval(()=>{
-      setCurrentImage((prev)=> (prev + 1) % images.length)
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [images])
+  
 
   return (
     <div>
@@ -36,19 +21,18 @@ const Hero = () => {
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0">
+          {/* content */}
+          <div className="px-15 py-30 xl:max-w-3xl sm:px-15 sm:max-w-lg md:px-25 lg:px-30 xl:px-20 xl:py-40">
+            <h5 className="">Quality services</h5>
+            <h1 className="font-bold text-4xl mb-2 sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl">
+              Specialized, Efficient, and thorough service
+            </h1>
+            <p className="mb-4">
+              We provide Performing tasks using the least amount of time,
+              energy, and money{" "}
+            </p>
 
-        {/* content */}
-        <div className="px-15 py-30 max-w-2xl ">
-          <h5 className="">Quality services</h5>
-          <h1 className="font-bold text-4xl mb-2">
-            Specialized, Efficient, and thorough service
-          </h1>
-          <p className="mb-4">
-            We provide Performing tasks using the least amount of time, energy,
-            and money{" "}
-          </p>
-
-          <div className="mt-10 text-white font-semibold cursor-pointer">
+            {/* <div className="mt-10 text-white font-semibold cursor-pointer">
             <Link
               href={"signup"}
               className=" px-5 py-3 rounded bg-amber-600" >
@@ -61,43 +45,20 @@ const Hero = () => {
             >
               View all Services
             </Link>
-          </div>
+          </div> */}
+            <div className="mt-4 flex gap-4">
+              
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="px-25 mt-10 ">
-        <div className="flex justify-between items-center p-4 ">
-          <div className=" w-100 ">
-            <h6>Affordable Solutions</h6>
-            <p className="text-3xl font-bold mb-3">
-              High-Quality and Friendly Service at Fair Prices
-            </p>
-            <p className="mb-8 text-sm">
-              We provide comprehensive services tailored to your needs.
-            </p>
-            <Link
-              href={"/service"}
-              className="bg-amber-500 px-5 p-3 rounded text-white font-semibold"
-            >
-              Get one now
-            </Link>
-          </div>
+      {/* Category List */}
+      {/* <div>
+        <CategoryList/>
+      </div> */}
 
-          <div className="w-1/2 flex justify-center transition-opacity duration-1000 ease-in-out">
-          {images.length > 0 && (
-            <Image
-              src={images[currentImage]}
-              width={400}
-              height={300}
-              alt="Service Image"
-              className="rounded-lg shadow-lg"
-            />
-          )}
-        </div>
-        </div>
-        <hr className="font-bold text-2xl mb-4 mt-5" />
-      </div>
+
 
       <div
         className="relative h-[500] bg-cover bg-center"

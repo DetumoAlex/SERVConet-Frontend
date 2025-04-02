@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="mx-4 md:mx-16">
       <Navbar />
       {children}
     </div>
